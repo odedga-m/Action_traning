@@ -19,6 +19,13 @@ jobs:
          run: echo "Trigered by ${{ github.event_name }}"
        - name: Echo branch name
          run: echo "Branch name= ${{ github.ref_name }}"
+       - uses: actions/checkout@v3.3.0
+
+       - name: List files in the repository
+         run: |
+          echo "The repository ${{ github.repository }} contains the following files:"
+          tree
+
          
   
     
