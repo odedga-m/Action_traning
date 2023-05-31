@@ -17,5 +17,8 @@ jobs:
     steps:
        - name: Echo event triger
          run: echo "Trigered by ${{ github.event_name }}"
+       - name: Echo branch name
+         run: echo "Branch name= ${{ github.branch }}"
+         
   
     
