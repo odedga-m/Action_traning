@@ -1,0 +1,29 @@
+name: first workflow
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: First step
+        run: echo "Hello, world!"
+  hello-world2:
+    runs-on: ubuntu-latest
+    needs: [hello-world]
+    steps:
+      - name: First step
+        run: echo "Hello, world2!"
+  hello-world3:
+    runs-on: ubuntu-latest
+    needs: [hello-world]
+    steps:
+      - name: First step
+        run: echo "Hello, world3!"
+  hello-world4:
+    runs-on: ubuntu-latest
+    needs: [hello-world2, hello-world3]
+    steps:
+      - name: First step
+        run: echo "Hello, world4!"
+    
