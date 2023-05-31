@@ -16,6 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
        - name: Echo event triger
-         run: echo "Trigered by"
+         run: echo "Trigered by ${{ github.event }}"
   
     
