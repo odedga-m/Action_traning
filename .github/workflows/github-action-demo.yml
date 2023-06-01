@@ -61,7 +61,12 @@ jobs:
     if: "${{ github.event_name == 'workflow_dispatch' && github.event.inputs.env == 'Prod'  }} "
     environment: Load-Test
     steps:
-      - run: echo "testing..."
+      - run: echo "uploaDind to ${{variables.URL}}"
+      - name: sleep
+        uses: ./
+        with:
+          time: 10s
+      - run: echo "uploaDind2 to ${{variables.URL}}"
       - name: sleep
         uses: ./
         with:
