@@ -10,7 +10,16 @@ on:
   schedule:
     - cron : '15 06 ? * 0'
   workflow_dispatch:
-  
+    inputs:
+       env :
+        description: env
+        required: true
+        default: Load-Test
+        type: choice
+        options:
+          - Load-Test
+          - Test
+          - Prod
 jobs:
   Build:
     runs-on: ubuntu-latest
