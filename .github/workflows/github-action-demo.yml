@@ -51,7 +51,6 @@ jobs:
     steps:
       - run: echo "testing..."
       - name: sleep
-        uses: ./
         with:
           time: 10s
           
@@ -63,12 +62,10 @@ jobs:
     steps:
       - run: echo "uploaDind to $URL"
       - name: sleep
-        uses: ./
         with:
           time: 10s
       - run: echo "uploaDind2 to $URL"
       - name: sleep
-        uses: ./
         with:
           time: 10s
 
