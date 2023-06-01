@@ -34,6 +34,13 @@ jobs:
          run: |
           echo "The repository ${{ github.repository }} contains the following files:"
           tree
+          
+  test:
+    runs-on: ubuntu-latest
+    needs: [Build]
+    if: "${{ github.event_name == workflow_dispatch }} "
+    steps:
+      - run: echo "testing..."
 
          
   
